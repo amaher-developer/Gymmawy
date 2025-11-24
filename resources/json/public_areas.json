@@ -1,0 +1,764 @@
+{
+  "132": {
+    "id": 133,
+    "name_ar": "عبدالله السالم",
+    "name_en": "Abdullah Al-Salem",
+    "city_id": 28
+  },
+  "133": {
+    "id": 134,
+    "name_ar": "العديلية",
+    "name_en": "Adailiya",
+    "city_id": 28
+  },
+  "134": {
+    "id": 135,
+    "name_ar": "بنيد القار",
+    "name_en": "Bneid Al Qar",
+    "city_id": 28
+  },
+  "135": {
+    "id": 136,
+    "name_ar": "الدعية",
+    "name_en": "Daiya",
+    "city_id": 28
+  },
+  "136": {
+    "id": 137,
+    "name_ar": "الدسمة",
+    "name_en": "Dasma",
+    "city_id": 28
+  },
+  "137": {
+    "id": 138,
+    "name_ar": "دسمان",
+    "name_en": "Dasman",
+    "city_id": 28
+  },
+  "138": {
+    "id": 139,
+    "name_ar": "الدوحة",
+    "name_en": "Doha",
+    "city_id": 28
+  },
+  "139": {
+    "id": 140,
+    "name_ar": "الفيحاء",
+    "name_en": "Faiha",
+    "city_id": 28
+  },
+  "140": {
+    "id": 141,
+    "name_ar": "غرناطة",
+    "name_en": "Ghornata",
+    "city_id": 28
+  },
+  "141": {
+    "id": 142,
+    "name_ar": "جابر الأحمد",
+    "name_en": "Jaber Al Ahmad",
+    "city_id": 28
+  },
+  "142": {
+    "id": 143,
+    "name_ar": "كيفان",
+    "name_en": "Kaifan",
+    "city_id": 28
+  },
+  "143": {
+    "id": 144,
+    "name_ar": "الخالدية",
+    "name_en": "Khaldiya",
+    "city_id": 28
+  },
+  "144": {
+    "id": 145,
+    "name_ar": "مدينة الكويت",
+    "name_en": "Kuwait City",
+    "city_id": 28
+  },
+  "145": {
+    "id": 146,
+    "name_ar": "المنصورية",
+    "name_en": "Mansouriya",
+    "city_id": 28
+  },
+  "146": {
+    "id": 147,
+    "name_ar": "المرقاب",
+    "name_en": "Mirqab",
+    "city_id": 28
+  },
+  "147": {
+    "id": 148,
+    "name_ar": "معسكرات المباركية",
+    "name_en": "Mubarakiya Camps",
+    "city_id": 28
+  },
+  "148": {
+    "id": 149,
+    "name_ar": "النهضة",
+    "name_en": "Nahda",
+    "city_id": 28
+  },
+  "149": {
+    "id": 150,
+    "name_ar": "شمال غرب الصليبخات‎",
+    "name_en": "North West Sulaibikhat",
+    "city_id": 28
+  },
+  "150": {
+    "id": 151,
+    "name_ar": "النزهة",
+    "name_en": "Nuzha",
+    "city_id": 28
+  },
+  "151": {
+    "id": 152,
+    "name_ar": "القادسية",
+    "name_en": "Qadsiya",
+    "city_id": 28
+  },
+  "152": {
+    "id": 153,
+    "name_ar": "القبلة",
+    "name_en": "Qibla",
+    "city_id": 28
+  },
+  "153": {
+    "id": 154,
+    "name_ar": "قرطبة",
+    "name_en": "Qortuba",
+    "city_id": 28
+  },
+  "154": {
+    "id": 155,
+    "name_ar": "الروضة",
+    "name_en": "Rawda",
+    "city_id": 28
+  },
+  "155": {
+    "id": 156,
+    "name_ar": "الصالحية",
+    "name_en": "Salhiya",
+    "city_id": 28
+  },
+  "156": {
+    "id": 157,
+    "name_ar": "الشامية",
+    "name_en": "Shamiya",
+    "city_id": 28
+  },
+  "157": {
+    "id": 158,
+    "name_ar": "الشرق",
+    "name_en": "Sharq",
+    "city_id": 28
+  },
+  "158": {
+    "id": 159,
+    "name_ar": "شويخ الادارية",
+    "name_en": "Shuwaikh Administrative",
+    "city_id": 28
+  },
+  "159": {
+    "id": 160,
+    "name_ar": "شويخ الصناعية 1",
+    "name_en": "Shuwaikh Industrial 1",
+    "city_id": 28
+  },
+  "160": {
+    "id": 161,
+    "name_ar": "شويخ الصناعية 2",
+    "name_en": "Shuwaikh Industrial 2",
+    "city_id": 28
+  },
+  "161": {
+    "id": 162,
+    "name_ar": "شويخ الصناعية3",
+    "name_en": "Shuwaikh Industrial 3",
+    "city_id": 28
+  },
+  "162": {
+    "id": 163,
+    "name_ar": "شويخ الصحية",
+    "name_en": "Shuwaikh Medical",
+    "city_id": 28
+  },
+  "163": {
+    "id": 164,
+    "name_ar": "شويخ السكنية",
+    "name_en": "Shuwaikh Residential",
+    "city_id": 28
+  },
+  "164": {
+    "id": 165,
+    "name_ar": "الصليبخات",
+    "name_en": "Sulaibikhat",
+    "city_id": 28
+  },
+  "165": {
+    "id": 166,
+    "name_ar": "السرة",
+    "name_en": "Surra",
+    "city_id": 28
+  },
+  "166": {
+    "id": 167,
+    "name_ar": "اليرموك",
+    "name_en": "Yarmouk",
+    "city_id": 28
+  },
+  "167": {
+    "id": 168,
+    "name_ar": "شويخ التعليمية",
+    "name_en": " Shuwaikh Educational",
+    "city_id": 28
+  },
+  "168": {
+    "id": 169,
+    "name_ar": "البدع",
+    "name_en": "Al-Bedae",
+    "city_id": 29
+  },
+  "169": {
+    "id": 170,
+    "name_ar": "بيان",
+    "name_en": "Bayan",
+    "city_id": 29
+  },
+  "170": {
+    "id": 171,
+    "name_ar": "حولي",
+    "name_en": "Hawally",
+    "city_id": 29
+  },
+  "171": {
+    "id": 172,
+    "name_ar": "حطين",
+    "name_en": "Hitteen",
+    "city_id": 29
+  },
+  "172": {
+    "id": 173,
+    "name_ar": "الجابرية",
+    "name_en": "Jabriya",
+    "city_id": 29
+  },
+  "173": {
+    "id": 174,
+    "name_ar": "ميدان حولي",
+    "name_en": "Maidan Hawally",
+    "city_id": 29
+  },
+  "174": {
+    "id": 175,
+    "name_ar": "مشرف",
+    "name_en": "Mishrif",
+    "city_id": 29
+  },
+  "175": {
+    "id": 176,
+    "name_ar": "مبارك العبدالله غرب مشرف",
+    "name_en": "Mubarak Al-Abdullah - West Mishref",
+    "city_id": 29
+  },
+  "176": {
+    "id": 177,
+    "name_ar": "الرميثية",
+    "name_en": "Rumaithiya",
+    "city_id": 29
+  },
+  "177": {
+    "id": 178,
+    "name_ar": "السلام",
+    "name_en": "Salam",
+    "city_id": 29
+  },
+  "178": {
+    "id": 179,
+    "name_ar": "السالمية",
+    "name_en": "Salmiya",
+    "city_id": 29
+  },
+  "179": {
+    "id": 180,
+    "name_ar": "سلوى",
+    "name_en": "Salwa",
+    "city_id": 29
+  },
+  "180": {
+    "id": 181,
+    "name_ar": "الشعب",
+    "name_en": "Shaab",
+    "city_id": 29
+  },
+  "181": {
+    "id": 182,
+    "name_ar": "الشهداء",
+    "name_en": "Shuhada",
+    "city_id": 29
+  },
+  "182": {
+    "id": 183,
+    "name_ar": "الصديق",
+    "name_en": "Siddiq",
+    "city_id": 29
+  },
+  "183": {
+    "id": 184,
+    "name_ar": "الزهراء",
+    "name_en": "Zahra",
+    "city_id": 29
+  },
+  "184": {
+    "id": 185,
+    "name_ar": "عباسية",
+    "name_en": "Abbasiya",
+    "city_id": 30
+  },
+  "185": {
+    "id": 186,
+    "name_ar": "عبدالله المبارك غرب جليب",
+    "name_en": "Abdullah Al-Mubarak - West Jeleeb",
+    "city_id": 30
+  },
+  "186": {
+    "id": 187,
+    "name_ar": "أبرق خيطان",
+    "name_en": "Abraq Khaitan",
+    "city_id": 30
+  },
+  "187": {
+    "id": 188,
+    "name_ar": "المطار",
+    "name_en": "Airport",
+    "city_id": 30
+  },
+  "188": {
+    "id": 189,
+    "name_ar": "الأندلس",
+    "name_en": "Andalous",
+    "city_id": 30
+  },
+  "189": {
+    "id": 190,
+    "name_ar": "العارضية",
+    "name_en": "Ardhiya",
+    "city_id": 30
+  },
+  "190": {
+    "id": 191,
+    "name_ar": "عارضية الصناعية",
+    "name_en": "Ardiya Small Industrial",
+    "city_id": 30
+  },
+  "191": {
+    "id": 192,
+    "name_ar": "عارضية مخازن",
+    "name_en": "Ardiya Storage Zone",
+    "city_id": 30
+  },
+  "192": {
+    "id": 193,
+    "name_ar": "أشبيليا",
+    "name_en": "Ashbeliah",
+    "city_id": 30
+  },
+  "193": {
+    "id": 194,
+    "name_ar": "ضجيج",
+    "name_en": "Dhajeej",
+    "city_id": 30
+  },
+  "194": {
+    "id": 195,
+    "name_ar": "منطقة المعارض جنوب خيطان",
+    "name_en": "Exhibits - South Khaitan",
+    "city_id": 30
+  },
+  "195": {
+    "id": 196,
+    "name_ar": "الفروانية",
+    "name_en": "Farwaniya",
+    "city_id": 30
+  },
+  "196": {
+    "id": 197,
+    "name_ar": "الفردوس",
+    "name_en": "Ferdous",
+    "city_id": 30
+  },
+  "197": {
+    "id": 198,
+    "name_ar": "جليب شيوخ",
+    "name_en": "Jeleeb Al-Shuyoukh",
+    "city_id": 30
+  },
+  "198": {
+    "id": 199,
+    "name_ar": "خيطان",
+    "name_en": "Khaitan",
+    "city_id": 30
+  },
+  "199": {
+    "id": 200,
+    "name_ar": "العمرية",
+    "name_en": "Omariya",
+    "city_id": 30
+  },
+  "200": {
+    "id": 201,
+    "name_ar": "الرابية",
+    "name_en": "Rabiya",
+    "city_id": 30
+  },
+  "201": {
+    "id": 202,
+    "name_ar": "الري",
+    "name_en": "Rai",
+    "city_id": 30
+  },
+  "202": {
+    "id": 203,
+    "name_ar": "الرقعي",
+    "name_en": "Reggai",
+    "city_id": 30
+  },
+  "203": {
+    "id": 204,
+    "name_ar": "الرحاب",
+    "name_en": "Rehab",
+    "city_id": 30
+  },
+  "204": {
+    "id": 205,
+    "name_ar": "صباح الناصر",
+    "name_en": "Sabah Al-Nasser",
+    "city_id": 30
+  },
+  "205": {
+    "id": 206,
+    "name_ar": "مطار الشيخ سعد العبدالله",
+    "name_en": "Sheikh Saad Al Abdullah Airport",
+    "city_id": 30
+  },
+  "206": {
+    "id": 207,
+    "name_ar": "ابوحليفة",
+    "name_en": "Abu Halifa",
+    "city_id": 31
+  },
+  "207": {
+    "id": 208,
+    "name_ar": "الجليعة والزور وصولة",
+    "name_en": "Al Julayah - Az Zour Sulah",
+    "city_id": 31
+  },
+  "208": {
+    "id": 209,
+    "name_ar": "الأحمدي",
+    "name_en": "Al-Ahmadi",
+    "city_id": 31
+  },
+  "209": {
+    "id": 210,
+    "name_ar": "على صباح السالم - ام الهيمان",
+    "name_en": "Ali Sabah Al-Salem - Umm Al Hayman",
+    "city_id": 31
+  },
+  "210": {
+    "id": 211,
+    "name_ar": "بنيدر",
+    "name_en": "Bnaider",
+    "city_id": 31
+  },
+  "211": {
+    "id": 212,
+    "name_ar": "الظهر",
+    "name_en": "Dhaher",
+    "city_id": 31
+  },
+  "212": {
+    "id": 213,
+    "name_ar": "شرق الاحمدي",
+    "name_en": "East Al Ahmadi",
+    "city_id": 31
+  },
+  "213": {
+    "id": 214,
+    "name_ar": "العقيلة",
+    "name_en": "Egaila",
+    "city_id": 31
+  },
+  "214": {
+    "id": 215,
+    "name_ar": "فهد الاحمد",
+    "name_en": "Fahad Al Ahmed",
+    "city_id": 31
+  },
+  "215": {
+    "id": 216,
+    "name_ar": "الفحيحيل",
+    "name_en": "Fahaheel",
+    "city_id": 31
+  },
+  "216": {
+    "id": 217,
+    "name_ar": "الفنطاس",
+    "name_en": "Fintas",
+    "city_id": 31
+  },
+  "217": {
+    "id": 218,
+    "name_ar": "هدية",
+    "name_en": "Hadiya",
+    "city_id": 31
+  },
+  "218": {
+    "id": 219,
+    "name_ar": "جابر العلي",
+    "name_en": "Jaber Al Ali",
+    "city_id": 31
+  },
+  "219": {
+    "id": 220,
+    "name_ar": "الخيران",
+    "name_en": "Khairan",
+    "city_id": 31
+  },
+  "220": {
+    "id": 221,
+    "name_ar": "مقوع",
+    "name_en": "Magwa",
+    "city_id": 31
+  },
+  "221": {
+    "id": 222,
+    "name_ar": "المهبولة",
+    "name_en": "Mahboula",
+    "city_id": 31
+  },
+  "222": {
+    "id": 223,
+    "name_ar": "المنقف",
+    "name_en": "Mangaf",
+    "city_id": 31
+  },
+  "223": {
+    "id": 224,
+    "name_ar": "ميناء عبدالله",
+    "name_en": "Mina Abdullah",
+    "city_id": 31
+  },
+  "224": {
+    "id": 225,
+    "name_ar": "ميناء الاحمدي",
+    "name_en": "Mina Al Ahmadi",
+    "city_id": 31
+  },
+  "225": {
+    "id": 226,
+    "name_ar": "النويصب",
+    "name_en": "Nuwaiseeb",
+    "city_id": 31
+  },
+  "226": {
+    "id": 227,
+    "name_ar": "الرقة",
+    "name_en": "Riqqa",
+    "city_id": 31
+  },
+  "227": {
+    "id": 228,
+    "name_ar": "مدينة صباح الأحمد البحرية",
+    "name_en": "Sabah Al Ahmad Marine City",
+    "city_id": 31
+  },
+  "228": {
+    "id": 229,
+    "name_ar": "صباح الأحمد السكنية",
+    "name_en": "Sabah AL Ahmad residential",
+    "city_id": 31
+  },
+  "229": {
+    "id": 230,
+    "name_ar": "الصباحية",
+    "name_en": "Sabahiya",
+    "city_id": 31
+  },
+  "230": {
+    "id": 231,
+    "name_ar": "ميناء الشعيبة",
+    "name_en": "Shuaiba Port",
+    "city_id": 31
+  },
+  "231": {
+    "id": 232,
+    "name_ar": "مزارع الوفرة",
+    "name_en": "Wafra farms",
+    "city_id": 31
+  },
+  "232": {
+    "id": 233,
+    "name_ar": "الوفرة السكنية",
+    "name_en": "Wafra residential",
+    "city_id": 31
+  },
+  "233": {
+    "id": 234,
+    "name_ar": "جهراء - النعيم",
+    "name_en": "Jahra - Al Naeem",
+    "city_id": 32
+  },
+  "234": {
+    "id": 235,
+    "name_ar": "جهراء - أمغرة الصناعية",
+    "name_en": "Jahra - Amgarah Industrial",
+    "city_id": 32
+  },
+  "235": {
+    "id": 236,
+    "name_ar": "جهراء - منطقة الجهراء",
+    "name_en": "Jahra - Jahra Area",
+    "city_id": 32
+  },
+  "236": {
+    "id": 237,
+    "name_ar": "جهراء - كبد",
+    "name_en": "Jahra - Kabd",
+    "city_id": 32
+  },
+  "237": {
+    "id": 238,
+    "name_ar": "جهراء - النسيم",
+    "name_en": "Jahra - Nasseem",
+    "city_id": 32
+  },
+  "238": {
+    "id": 239,
+    "name_ar": "جهراء - العيون",
+    "name_en": "Jahra - Oyoun",
+    "city_id": 32
+  },
+  "239": {
+    "id": 240,
+    "name_ar": "جهراء - قصر",
+    "name_en": "Jahra - Qasr",
+    "city_id": 32
+  },
+  "240": {
+    "id": 241,
+    "name_ar": "جهراء - سعد العبد الله",
+    "name_en": "Jahra - Saad Al Abdullah",
+    "city_id": 32
+  },
+  "241": {
+    "id": 242,
+    "name_ar": "جهراء - صليبية",
+    "name_en": "Jahra - Sulaibiya",
+    "city_id": 32
+  },
+  "242": {
+    "id": 243,
+    "name_ar": "جهراء - صليبية الصناعية 1",
+    "name_en": "Jahra - Sulaibiya Industrial 1",
+    "city_id": 32
+  },
+  "243": {
+    "id": 244,
+    "name_ar": "جهراء صليبية الصناعية 2",
+    "name_en": "Jahra - Sulaibiya Industrial 2",
+    "city_id": 32
+  },
+  "244": {
+    "id": 245,
+    "name_ar": "أبو فطيرة",
+    "name_en": "Abu Ftaira",
+    "city_id": 33
+  },
+  "245": {
+    "id": 246,
+    "name_ar": "أبو الحصانية",
+    "name_en": "Abu Hasaniya",
+    "city_id": 33
+  },
+  "246": {
+    "id": 247,
+    "name_ar": "العدان",
+    "name_en": "Adan",
+    "city_id": 33
+  },
+  "247": {
+    "id": 248,
+    "name_ar": "المسايل",
+    "name_en": "Al Masayel",
+    "city_id": 33
+  },
+  "248": {
+    "id": 249,
+    "name_ar": "القرين",
+    "name_en": "Al-Qurain",
+    "city_id": 33
+  },
+  "249": {
+    "id": 250,
+    "name_ar": "القصور",
+    "name_en": "Al-Qusour",
+    "city_id": 33
+  },
+  "250": {
+    "id": 251,
+    "name_ar": "شريط الساحلي ب",
+    "name_en": "Coast Strip B",
+    "city_id": 33
+  },
+  "251": {
+    "id": 252,
+    "name_ar": "فنيطيس",
+    "name_en": "Fnaitess",
+    "city_id": 33
+  },
+  "252": {
+    "id": 253,
+    "name_ar": "المسيلة",
+    "name_en": "Messila",
+    "city_id": 33
+  },
+  "253": {
+    "id": 254,
+    "name_ar": "مبارك الكبير",
+    "name_en": "Mubarak Al-Kabir",
+    "city_id": 33
+  },
+  "254": {
+    "id": 255,
+    "name_ar": "صباح السالم",
+    "name_en": "Sabah Al-Salem",
+    "city_id": 33
+  },
+  "255": {
+    "id": 256,
+    "name_ar": "صبحان الصناعية",
+    "name_en": "Sabhan Industrial",
+    "city_id": 33
+  },
+  "256": {
+    "id": 257,
+    "name_ar": "جنوب الوسطي",
+    "name_en": "South Wista",
+    "city_id": 33
+  },
+  "257": {
+    "id": 258,
+    "name_ar": "غرب ابو فطيرة الحرفية",
+    "name_en": "West Abu Fetera Small Indust",
+    "city_id": 33
+  },
+  "258": {
+    "id": 259,
+    "name_ar": "وسطي",
+    "name_en": "Wista",
+    "city_id": 33
+  }
+}

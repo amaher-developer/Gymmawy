@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name_ar": "خزائن",
+    "name_en": "Lockers",
+    "logo": "lockers.png"
+  },
+  {
+    "id": 2,
+    "name_ar": "ساونا",
+    "name_en": "Sauna",
+    "logo": "sauna.png"
+  },
+  {
+    "id": 3,
+    "name_ar": "جاكوزي",
+    "name_en": "Jacuzzi",
+    "logo": "juczzi.png"
+  },
+  {
+    "id": 4,
+    "name_ar": "رجال فقط",
+    "name_en": "Men only",
+    "logo": "mens.png"
+  },
+  {
+    "id": 5,
+    "name_ar": "سيدات فقط",
+    "name_en": "Women only",
+    "logo": "women_only.png"
+  },
+  {
+    "id": 6,
+    "name_ar": "مختلط",
+    "name_en": "Mix",
+    "logo": "mix.png"
+  },
+  {
+    "id": 7,
+    "name_ar": "منطقة اطفال",
+    "name_en": "Kids Area",
+    "logo": "kids_area.png"
+  },
+  {
+    "id": 8,
+    "name_ar": "نادي اطفال",
+    "name_en": "Kids Gym",
+    "logo": "kids_gym.jpg"
+  },
+  {
+    "id": 9,
+    "name_ar": "صفوف تمرين جماعي",
+    "name_en": "Fitness Classes",
+    "logo": "fitness_classes.png"
+  },
+  {
+    "id": 10,
+    "name_ar": "كروس فيت",
+    "name_en": "Crossfit",
+    "logo": "crossfit.png"
+  },
+  {
+    "id": 11,
+    "name_ar": "فنون قتالية مختلطة",
+    "name_en": "MMA",
+    "logo": "MMA_classes.png"
+  },
+  {
+    "id": 12,
+    "name_ar": "تدريب جماعي",
+    "name_en": "Group Training",
+    "logo": "group_training.png"
+  },
+  {
+    "id": 13,
+    "name_ar": "24 ساعة",
+    "name_en": "24 Hours",
+    "logo": "24_hours.png"
+  },
+  {
+    "id": 14,
+    "name_ar": "حمام سباحة",
+    "name_en": "Pool",
+    "logo": "pool.jpg"
+  },
+  {
+    "id": 15,
+    "name_ar": "حمامات",
+    "name_en": "Showers",
+    "logo": "showers.png"
+  }
+]

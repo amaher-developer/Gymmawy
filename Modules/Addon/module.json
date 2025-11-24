@@ -1,0 +1,9 @@
+{
+    "name":  "Addon",
+    "slug":  "addon",
+    "version":  "1.0",
+    "description":  "This is the description for the Addon module.",
+    "providers":  [
+                      "Modules\\Addon\\Providers\\ModuleServiceProvider"
+                  ]
+}

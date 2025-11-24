@@ -1,0 +1,9 @@
+{
+    "name":  "Crud",
+    "slug":  "crud",
+    "version":  "1.0",
+    "description":  "This is the description for the Crud module.",
+    "providers":  [
+                      "Modules\\Crud\\Providers\\ModuleServiceProvider"
+                  ]
+}

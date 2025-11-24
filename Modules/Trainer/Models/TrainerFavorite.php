@@ -1,0 +1,39 @@
+<?php
+
+namespace Modules\Trainer\Models;
+
+use Modules\Generic\Models\GenericModel;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class TrainerFavorite extends GenericModel
+{
+
+    protected $dates = ['deleted_at'];
+
+    protected $table = 'trainer_favorites';
+    protected $guarded = ['id'];
+    protected $appends = [];
+    public static $uploads_path='uploads/trainerfavorites/';
+    public static $thumbnails_uploads_path='uploads/trainerfavorites/thumbnails/';
+
+
+
+    public function trainer(){
+        return $this->belongsTo(Trainer::class, 'trainer_id');
+    }
+
+
+    public function toArray()
+    {
+        return parent::toArray();
+        $to_array_attributes = [];
+        foreach ($this->relations as $key => $relation) {
+            $to_array_attributes[$key] = $relation;
+        }
+        foreach ($this->appends as $key => $append) {
+            $to_array_attributes[$key] = $append;
+        }
+        return $to_array_attributes;
+    }
+
+}

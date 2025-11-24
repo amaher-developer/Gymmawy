@@ -1,0 +1,12 @@
+<div class="form-group col-md-6">
+    <label class="col-md-3 control-label">{{ucf_field}}</label>
+    <div class="col-md-9">
+        <select id="{{lcf_field}}" name="{{lcf_field}}" class="bs-select form-control" data-live-search="true" {{required}}>
+            @foreach(array(1,2) as $item)
+                <option
+                        {{ old('{{lcf_field}}', ${{lcf_model}}->{{lcf_field}})==$item?'selected':'' }}
+                        value="{{ $item }}">Option {{ $item }}</option>
+            @endforeach
+        </select>
+    </div>
+</div>

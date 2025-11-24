@@ -1,0 +1,103 @@
+@media all {
+    body {
+        margin: 0;
+        padding: 0;
+        /*font-family: Helvetica, Arial;*/
+    }
+
+    .header1 {
+        margin: 0;
+        padding: 0;
+        font-size: 30px
+    }
+
+    .divContainer {
+        height: auto;
+        overflow: hidden;
+    }
+
+    .divRight {
+        width: 300px;
+        float: right;
+    }
+
+    .divLeft {
+        float: none;
+        width: auto;
+        overflow: hidden;
+    }
+
+    .warning {
+        color: #cc0000;
+    }
+
+    .btnBig {
+        padding: 3px;
+        margin: 10px 0 10px 0;
+        font-size: 18px
+    }
+
+    canvas {
+        display: none;
+    }
+
+    input[type="file"] {
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    #divCamera {
+        /*border: 1px solid #cccccc;*/
+        padding: 5px;
+        margin: 2px
+    }
+
+    #divCamera:hover {
+        /*background: #ccffcc;*/
+    }
+
+    #divFile {
+        border: 1px solid #cccccc;
+        padding: 5px;
+        margin: 2px
+    }
+
+    #divFile:hover {
+        background: #ccffcc;
+    }
+
+    #div_no_camera {
+        color: red;
+        display: none;
+    }
+
+    #divQRPanel {
+        display: none;
+    }
+
+    #allow_cam {
+        color: red
+    }
+
+    #cam-qr-result, #file-qr-result {
+        display: none;
+        font-size: 18px;
+        border: 1px solid #cccccc;
+        width: 98%;
+        padding: 10px;
+        background: #ffff66;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .divRight {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header1 {
+        font-size: 26px
+    }
+}

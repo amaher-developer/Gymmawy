@@ -1,0 +1,9 @@
+{
+    "name":  "Gym",
+    "slug":  "gym",
+    "version":  "1.0",
+    "description":  "This is the description for the Gym module.",
+    "providers":  [
+                      "Modules\\Gym\\Providers\\ModuleServiceProvider"
+                  ]
+}

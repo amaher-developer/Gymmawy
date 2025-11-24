@@ -1,0 +1,38 @@
+[
+  {
+    "id": 28,
+    "name_ar": "مدينة الكويت",
+    "name_en": "Kuwait City (Capital)",
+    "country_id": 109
+  },
+  {
+    "id": 29,
+    "name_ar": "حولي",
+    "name_en": "Hawally",
+    "country_id": 109
+  },
+  {
+    "id": 30,
+    "name_ar": "الفروانية",
+    "name_en": "Farwaniya",
+    "country_id": 109
+  },
+  {
+    "id": 31,
+    "name_ar": "الأحمدي",
+    "name_en": "Ahmadi",
+    "country_id": 109
+  },
+  {
+    "id": 32,
+    "name_ar": "الجهراء",
+    "name_en": "Al Jahra",
+    "country_id": 109
+  },
+  {
+    "id": 33,
+    "name_ar": "مبارك الكبير",
+    "name_en": "Mubarak Al-kabir",
+    "country_id": 109
+  }
+]

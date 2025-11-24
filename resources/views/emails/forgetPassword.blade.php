@@ -1,0 +1,1 @@
+<div>your new password: {{$password}}</div>

@@ -1,0 +1,9 @@
+{
+    "name":  "Banner",
+    "slug":  "banner",
+    "version":  "1.0",
+    "description":  "This is the description for the Banner module.",
+    "providers":  [
+                      "Modules\\Banner\\Providers\\ModuleServiceProvider"
+                  ]
+}

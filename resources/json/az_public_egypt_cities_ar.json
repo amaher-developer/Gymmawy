@@ -1,0 +1,218 @@
+[
+    {
+        "id": 1,
+        "country_id": 59,
+        "name_tr": {
+            "7": "القاهرة",
+            "40": "Cairo"
+        }
+    },
+    {
+        "id": 2,
+        "country_id": 59,
+        "name_tr": {
+            "7": "الاسكندرية",
+            "40": "Alexandria"
+        }
+    },
+    {
+        "id": 3,
+        "country_id": 59,
+        "name_tr": {
+            "7": "الجيزة",
+            "40": "Giza"
+        }
+    },
+    {
+        "id": 4,
+        "country_id": 59,
+        "name_tr": {
+            "7": "القليوبية",
+            "40": "Qalyubia"
+        }
+    },
+    {
+        "id": 5,
+        "country_id": 59,
+        "name_tr": {
+            "7": "المنوفية",
+            "40": "Minufiyah"
+        }
+    },
+    {
+        "id": 6,
+        "country_id": 59,
+        "name_tr": {
+            "7": "الغربية",
+            "40": "Gharbia"
+        }
+    },
+    {
+        "id": 7,
+        "country_id": 59,
+        "name_tr": {
+            "7": "الشرقية",
+            "40": "Sharqiya"
+        }
+    },
+    {
+        "id": 8,
+        "country_id": 59,
+        "name_tr": {
+            "7": "كفر الشيخ",
+            "40": "Kafr El Sheikh"
+        }
+    },
+    {
+        "id": 9,
+        "country_id": 59,
+        "name_tr": {
+            "7": "الدقهلية",
+            "40": "Dakahlia"
+        }
+    },
+    {
+        "id": 10,
+        "country_id": 59,
+        "name_tr": {
+            "7": "اسوان",
+            "40": "Aswan"
+        }
+    },
+    {
+        "id": 11,
+        "country_id": 59,
+        "name_tr": {
+            "7": "اسيوط",
+            "40": "Asyut"
+        }
+    },
+    {
+        "id": 12,
+        "country_id": 59,
+        "name_tr": {
+            "7": "البحيرة ",
+            "40": "Beheira"
+        }
+    },
+    {
+        "id": 13,
+        "country_id": 59,
+        "name_tr": {
+            "7": "بني سويف",
+            "40": "Beni Suef"
+        }
+    },
+    {
+        "id": 14,
+        "country_id": 59,
+        "name_tr": {
+            "7": "دمياط",
+            "40": "Damietta"
+        }
+    },
+    {
+        "id": 15,
+        "country_id": 59,
+        "name_tr": {
+            "7": "الفيوم",
+            "40": "Fayyum"
+        }
+    },
+    {
+        "id": 16,
+        "country_id": 59,
+        "name_tr": {
+            "7": "الاسماعيلية",
+            "40": "Ismailia"
+        }
+    },
+    {
+        "id": 17,
+        "country_id": 59,
+        "name_tr": {
+            "7": "مطروح",
+            "40": "Marsa Matruh"
+        }
+    },
+    {
+        "id": 18,
+        "country_id": 59,
+        "name_tr": {
+            "7": "المنيا",
+            "40": "Minya"
+        }
+    },
+    {
+        "id": 19,
+        "country_id": 59,
+        "name_tr": {
+            "7": "الوادي الجديد",
+            "40": "New Valley"
+        }
+    },
+    {
+        "id": 20,
+        "country_id": 59,
+        "name_tr": {
+            "7": "شمال سيناء",
+            "40": "North Sinai"
+        }
+    },
+    {
+        "id": 21,
+        "country_id": 59,
+        "name_tr": {
+            "7": "بورسعيد",
+            "40": "Port Said"
+        }
+    },
+    {
+        "id": 22,
+        "country_id": 59,
+        "name_tr": {
+            "7": "قنا",
+            "40": "Qena"
+        }
+    },
+    {
+        "id": 23,
+        "country_id": 59,
+        "name_tr": {
+            "7": "البحر الاحمر",
+            "40": "Red Sea"
+        }
+    },
+    {
+        "id": 24,
+        "country_id": 59,
+        "name_tr": {
+            "7": "سوهاج",
+            "40": "Sohag"
+        }
+    },
+    {
+        "id": 25,
+        "country_id": 59,
+        "name_tr": {
+            "7": "جنوب سيناء ",
+            "40": "South Sinai"
+        }
+    },
+    {
+        "id": 26,
+        "country_id": 59,
+        "name_tr": {
+            "7": "السويس",
+            "40": "Suez"
+        }
+    },
+    {
+        "id": 27,
+        "country_id": 59,
+        "name_tr": {
+            "7": "الاقصر",
+            "40": "Luxor"
+        }
+    }
+]

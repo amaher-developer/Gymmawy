@@ -1,0 +1,6 @@
+<?php
+
+Route::prefix('api/{{lcf_controller_name}}')
+    ->middleware(['api'])
+    ->group(function () {
+});

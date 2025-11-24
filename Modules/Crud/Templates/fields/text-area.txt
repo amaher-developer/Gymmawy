@@ -1,0 +1,8 @@
+<div class="form-group col-md-6">
+    <label class="col-md-3 control-label">{{ucf_field}}</label>
+    <div class="col-md-9">
+                 <textarea id="{{lcf_field}}"
+                           name="{{lcf_field}}" class="form-control" {{required}}>{{ old('{{lcf_field}}', ${{lcf_model}}->{{lcf_field}}) }}</textarea>
+    </div>
+</div>
+<div style="clear: both;"></div>

@@ -1,0 +1,9 @@
+{
+    "name": "Generic",
+    "slug": "generic",
+    "version": "1.0",
+    "description": "This is the description for the Generic module.",
+    "providers": [
+        "Modules\\Generic\\Providers\\ModuleServiceProvider"
+    ]
+}

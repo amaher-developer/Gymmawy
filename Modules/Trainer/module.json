@@ -1,0 +1,9 @@
+{
+    "name":  "Trainer",
+    "slug":  "trainer",
+    "version":  "1.0",
+    "description":  "This is the description for the Trainer module.",
+    "providers":  [
+                      "Modules\\Trainer\\Providers\\ModuleServiceProvider"
+                  ]
+}

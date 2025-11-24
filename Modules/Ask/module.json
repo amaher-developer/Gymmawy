@@ -1,0 +1,9 @@
+{
+    "name":  "Ask",
+    "slug":  "ask",
+    "version":  "1.0",
+    "description":  "This is the description for the Ask module.",
+    "providers":  [
+                      "Modules\\Ask\\Providers\\ModuleServiceProvider"
+                  ]
+}

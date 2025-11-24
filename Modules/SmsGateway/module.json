@@ -1,0 +1,9 @@
+{
+    "name":  "SmsGateway",
+    "slug":  "sms-gateway",
+    "version":  "1.0",
+    "description":  "This is the description for the SmsGateway module.",
+    "providers":  [
+                      "Modules\\SmsGateway\\Providers\\ModuleServiceProvider"
+                  ]
+}

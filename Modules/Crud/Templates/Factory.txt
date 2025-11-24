@@ -1,0 +1,9 @@
+<?php
+
+use Faker\Generator as Faker;
+
+$factory->define(\App\Modules\{{ucf_module_name}}\Models\{{ucf_model_name}}::class, function (Faker $faker) {
+    return [
+        {{ucf_factory_fakers}}
+    ];
+});

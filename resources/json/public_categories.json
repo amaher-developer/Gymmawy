@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name_ar": "رفع أثقال",
+    "name_en": "Gym",
+    "logo": "gym.png"
+  },
+  {
+    "id": 2,
+    "name_ar": "فيتنس",
+    "name_en": "Fitness",
+    "logo": "fitness.png"
+  },
+  {
+    "id": 3,
+    "name_ar": "ايروبيك",
+    "name_en": "Aerobic",
+    "logo": "aerobic.png"
+  },
+  {
+    "id": 4,
+    "name_ar": "بيلاتيس",
+    "name_en": "Pilates",
+    "logo": "pilates.png"
+  },
+  {
+    "id": 5,
+    "name_ar": "يوجا",
+    "name_en": "Yoga",
+    "logo": "yoga.png"
+  },
+  {
+    "id": 6,
+    "name_ar": "رقص",
+    "name_en": "Dance",
+    "logo": "dance.png"
+  },
+  {
+    "id": 7,
+    "name_ar": "مساج",
+    "name_en": "Massage",
+    "logo": "massage.png"
+  },
+  {
+    "id": 8,
+    "name_ar": "سباحة",
+    "name_en": "Swimming",
+    "logo": "swimming.png"
+  },
+  {
+    "id": 9,
+    "name_ar": "فنون قتالية مختلطة",
+    "name_en": "MMA",
+    "logo": "mma.png"
+  },
+  {
+    "id": 10,
+    "name_ar": "كروس فيت",
+    "name_en": "Crossfit",
+    "logo": "crossfit.png"
+  }
+]

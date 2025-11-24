@@ -1,0 +1,10 @@
+<?php
+
+namespace Modules\{{ucf_module_name}}\Http\Controllers\{{ucf_folder_name}};
+
+use Modules\Generic\Http\Controllers\{{ucf_folder_name}}\Generic{{ucf_folder_name}}Controller;
+
+class {{ucf_model_name}}{{ucf_folder_name}}Controller extends Generic{{ucf_folder_name}}Controller
+{
+
+}

@@ -1,0 +1,9 @@
+{
+    "name":  "Client",
+    "slug":  "client",
+    "version":  "1.0",
+    "description":  "This is the description for the Client module.",
+    "providers":  [
+                      "Modules\\Client\\Providers\\ModuleServiceProvider"
+                  ]
+}

@@ -1,0 +1,24 @@
+<?php
+
+Route::prefix('operate/{{lcf_controller_name}}')
+    ->middleware(['auth'])
+    ->group(function () {
+    Route::name('list{{ucf_controller_name}}')
+        ->get('/', '{{ucf_folder}}\{{ucf_controller_name}}{{ucf_folder}}Controller@index')
+        ->middleware(['permission:super|{{slug_controller_name}}-index']);
+    Route::name('create{{ucf_controller_name}}')
+        ->get('create', '{{ucf_folder}}\{{ucf_controller_name}}{{ucf_folder}}Controller@create')
+        ->middleware(['permission:super|{{slug_controller_name}}-create']);
+    Route::name('store{{ucf_controller_name}}')
+        ->post('create', '{{ucf_folder}}\{{ucf_controller_name}}{{ucf_folder}}Controller@store')
+        ->middleware(['permission:super|{{slug_controller_name}}-create']);
+    Route::name('edit{{ucf_controller_name}}')
+        ->get('{{{lcf_controller_name}}}/edit', '{{ucf_folder}}\{{ucf_controller_name}}{{ucf_folder}}Controller@edit')
+        ->middleware(['permission:super|{{slug_controller_name}}-edit']);
+    Route::name('edit{{ucf_controller_name}}')
+        ->post('{{{lcf_controller_name}}}/edit', '{{ucf_folder}}\{{ucf_controller_name}}{{ucf_folder}}Controller@update')
+        ->middleware(['permission:super|{{slug_controller_name}}-edit']);
+    Route::name('delete{{ucf_controller_name}}')
+        ->get('{{{lcf_controller_name}}}/delete', '{{ucf_folder}}\{{ucf_controller_name}}{{ucf_folder}}Controller@destroy')
+        ->middleware(['permission:super|{{slug_controller_name}}-destroy']);
+});

@@ -1,0 +1,211 @@
+<?php
+
+namespace Modules\{{ucf_module_name}}\Http\Controllers\{{ucf_folder_name}};
+
+use Illuminate\Container\Container as Application;
+use Modules\Generic\Http\Controllers\Admin\GenericAdminController;
+use Modules\{{ucf_module_name}}\Http\Requests\{{ucf_model_name}}Request;
+use Modules\{{ucf_module_name}}\Repositories\{{ucf_model_name}}Repository;
+use Modules\{{ucf_module_name}}\Models\{{ucf_model_name}};
+use Carbon\Carbon;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image;
+
+class {{ucf_model_name}}{{ucf_folder_name}}Controller extends GenericAdminController
+{
+     public ${{ucf_model_name}}Repository;
+
+         public function __construct()
+         {
+             parent::__construct();
+
+             $this->{{ucf_model_name}}Repository=new {{ucf_model_name}}Repository(new Application);
+         }
+
+
+    public function index()
+    {
+
+        $title = '{{plural_model_name}} List';
+        $this->request_array = ['id'];
+        $request_array = $this->request_array;
+        foreach ($request_array as $item) $$item = request()->has($item) ? request()->$item : false;
+        if(request('trashed'))
+        {
+            ${{plural_model_name}} = $this->{{ucf_model_name}}Repository->onlyTrashed()->orderBy('id', 'DESC');
+        }
+        else
+        {
+            ${{plural_model_name}} = $this->{{ucf_model_name}}Repository->orderBy('id', 'DESC');
+        }
+
+
+             //apply filters
+                ${{plural_model_name}}->when($id, function ($query) use ($id) {
+                        $query->where('id','=', $id);
+                });
+                 $search_query = request()->query();
+
+                       if (request()->ajax() && request()->exists('export')) {
+                             ${{plural_model_name}} = ${{plural_model_name}}->get();
+                             $array = $this->prepareForExport(${{plural_model_name}});
+                             $fileName = '{{plural_model_name}}-' . Carbon::now()->toDateTimeString();
+                             $file = Excel::create($fileName, function ($excel) use ($array) {
+                                 $excel->setTitle('title');
+                                 $excel->sheet('sheet1', function ($sheet) use ($array) {
+                                     $sheet->fromArray($array);
+                                 });
+                             });
+                             $file = $file->string('xlsx');
+                             return [
+                                 'name' => $fileName,
+                                 'file' => "data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64," . base64_encode($file)
+                             ];
+                         }
+                         if ($this->limit) {
+                             ${{plural_model_name}} = ${{plural_model_name}}->paginate($this->limit);
+                             $total = ${{plural_model_name}}->total();
+                         } else {
+                             ${{plural_model_name}} = ${{plural_model_name}}->get();
+                             $total = ${{plural_model_name}}->count();
+                         }
+
+
+        return view('{{module_slug}}::{{ucf_folder_name}}.{{lcf_model_name}}_{{lcf_folder_name}}_list', compact('{{plural_model_name}}','title', 'total', 'search_query'));
+    }
+
+    private function prepareForExport($data)
+    {
+        return array_map(function ($row) {
+            return [
+                'ID' => $row['id']
+            ];
+        }, $data->toArray());
+    }
+
+    public function create()
+    {
+        $title = 'Create {{ucf_model_name}}';
+        return view('{{module_slug}}::{{ucf_folder_name}}.{{lcf_model_name}}_{{lcf_folder_name}}_form', ['{{lcf_model_name}}' => new {{ucf_model_name}}(),'title'=>$title]);
+    }
+
+    public function store({{ucf_model_name}}Request $request)
+    {
+        ${{lcf_model_name}}_inputs = $this->prepare_inputs($request->except(['_token']));
+        $this->{{ucf_model_name}}Repository->create(${{lcf_model_name}}_inputs);
+        sweet_alert()->success('Done', '{{ucf_model_name}} Added successfully');
+        return redirect(route('{{list_route_name}}'));
+    }
+
+    public function edit($id)
+    {
+        ${{lcf_model_name}} =$this->{{ucf_model_name}}Repository->withTrashed()->find($id);
+        $title = 'Edit {{ucf_model_name}}';
+        return view('{{module_slug}}::{{ucf_folder_name}}.{{lcf_model_name}}_{{lcf_folder_name}}_form', ['{{lcf_model_name}}' => ${{lcf_model_name}},'title'=>$title]);
+    }
+
+    public function update({{ucf_model_name}}Request $request, $id)
+    {
+        ${{lcf_model_name}} =$this->{{ucf_model_name}}Repository->withTrashed()->find($id);
+        ${{lcf_model_name}}_inputs = $this->prepare_inputs($request->except(['_token']));
+        ${{lcf_model_name}}->update(${{lcf_model_name}}_inputs);
+        sweet_alert()->success('Done', '{{ucf_model_name}} Updated successfully');
+        return redirect(route('{{list_route_name}}'));
+    }
+
+    public function destroy($id)
+      {
+          ${{lcf_model_name}} =$this->{{ucf_model_name}}Repository->withTrashed()->find($id);
+          if(${{lcf_model_name}}->trashed())
+          {
+              ${{lcf_model_name}}->restore();
+          }
+          else
+          {
+              ${{lcf_model_name}}->delete();
+          }
+        sweet_alert()->success('Done', '{{ucf_model_name}} Deleted successfully');
+        return redirect(route('{{list_route_name}}'));
+    }
+
+    private function prepare_inputs($inputs)
+    {
+        $input_file = 'image';
+        $uploaded='';
+
+                $destinationPath = base_path($this->{{ucf_model_name}}Repository->model()::$uploads_path);
+                $ThumbnailsDestinationPath = base_path($this->{{ucf_model_name}}Repository->model()::$thumbnails_uploads_path);
+        
+                if (!File::exists($destinationPath)) {
+                    File::makeDirectory($destinationPath, $mode = 0777, true, true);
+                }
+                if (!File::exists($ThumbnailsDestinationPath)) {
+                    File::makeDirectory($ThumbnailsDestinationPath, $mode = 0777, true, true);
+                }
+                if (request()->hasFile($input_file)) {
+                    $file = request()->file($input_file);
+        
+                    if (is_image($file->getRealPath())) {
+                        $filename = rand(0, 20000) . time() . '.' . $file->getClientOriginalExtension();
+        
+        
+                        $uploaded = $filename;
+        
+                        $img = Image::make($file);
+                        $original_width = $img->width();
+                        $original_height = $img->height();
+        
+                        if ($original_width > 1200 || $original_height > 900) {
+                            if ($original_width < $original_height) {
+                                $new_width = 1200;
+                                $new_height = ceil($original_height * 900 / $original_width);
+                            } else {
+                                $new_height = 900;
+                                $new_width = ceil($original_width * 1200 / $original_height);
+                            }
+        
+                            //save used image
+                            $img->encode('jpg', 90)->save($destinationPath . $filename);
+                            $img->resize($new_width, $new_height, function ($constraint) {
+                                $constraint->aspectRatio();
+                            })->encode('jpg', 90)->save($destinationPath . '' . $filename);
+        
+                            //create thumbnail
+                            if ($original_width < $original_height) {
+                                $thumbnails_width = 400;
+                                $thumbnails_height = ceil($new_height * 300 / $new_width);
+                            } else {
+                                $thumbnails_height = 300;
+                                $thumbnails_width = ceil($new_width * 400 / $new_height);
+                            }
+                            $img->resize($thumbnails_width, $thumbnails_height, function ($constraint) {
+                                $constraint->aspectRatio();
+                            })->encode('jpg', 90)->save($ThumbnailsDestinationPath . '' . $filename);
+                        } else {
+                            //save used image
+                            $img->encode('jpg', 90)->save($destinationPath . $filename);
+                            //create thumbnail
+                            if ($original_width < $original_height) {
+                                $thumbnails_width = 400;
+                                $thumbnails_height = ceil($original_height * 300 / $original_width);
+                            } else {
+                                $thumbnails_height = 300;
+                                $thumbnails_width = ceil($original_width * 400 / $original_height);
+                            }
+                            $img->resize($thumbnails_width, $thumbnails_height, function ($constraint) {
+                                $constraint->aspectRatio();
+                            })->encode('jpg', 90)->save($ThumbnailsDestinationPath . '' . $filename);
+                        }
+                            $inputs[$input_file]=$uploaded;
+                    }
+        
+                }
+        
+
+        !$inputs['deleted_at']?$inputs['deleted_at']=null:'';
+
+        return $inputs;
+    }
+
+}

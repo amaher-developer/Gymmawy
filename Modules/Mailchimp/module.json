@@ -1,0 +1,9 @@
+{
+    "name":  "Mailchimp",
+    "slug":  "mailchimp",
+    "version":  "1.0",
+    "description":  "This is the description for the Mailchimp module.",
+    "providers":  [
+                      "Modules\\Mailchimp\\Providers\\ModuleServiceProvider"
+                  ]
+}

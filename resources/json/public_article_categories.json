@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name_ar": "كمال اجسام",
+    "name_en": "Bodybuilding"
+  },
+  {
+    "id": 2,
+    "name_ar": "لياقه بدنيه",
+    "name_en": "Fitness"
+  },
+  {
+    "id": 3,
+    "name_ar": "تغذية",
+    "name_en": "Food And Nutrition"
+  },
+  {
+    "id": 4,
+    "name_ar": "اخبار",
+    "name_en": "News"
+  },
+  {
+    "id": 5,
+    "name_ar": "قصص نجاح",
+    "name_en": "Success Stories"
+  }
+]

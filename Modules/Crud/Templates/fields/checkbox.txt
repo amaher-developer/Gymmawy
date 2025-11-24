@@ -1,0 +1,14 @@
+<div class="form-group col-md-6">
+    <label class="col-md-3 control-label">{{ucf_field}}</label>
+    <div class="col-md-9">
+        <div class="mt-checkbox-list">
+            <label class="mt-checkbox mt-checkbox-outline"> Option
+                <input type="hidden" name="{{lcf_field}}" value="0">
+                <input type="checkbox" value="1" name="{{lcf_field}}"
+                        {{ old('{{lcf_field}}', ${{lcf_model}}->{{lcf_field}})==1?'checked':'' }}>
+                <span></span>
+            </label>
+        </div>
+    </div>
+
+</div>

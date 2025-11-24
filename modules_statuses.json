@@ -1,0 +1,17 @@
+{
+    "Access": true,
+    "Addon": true,
+    "Article": true,
+    "Ask": true,
+    "Banner": true,
+    "Client": true,
+    "Crud": true,
+    "Exceptionhandler": true,
+    "Generic": true,
+    "Gym": true,
+    "Mailchimp": true,
+    "Notification": true,
+    "SmsGateway": true,
+    "Store": true,
+    "Trainer": true
+}

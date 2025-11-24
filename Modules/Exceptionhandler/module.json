@@ -1,0 +1,9 @@
+{
+    "name":  "Exceptionhandler",
+    "slug":  "exceptionhandler",
+    "version":  "1.0",
+    "description":  "This is the description for the Exceptionhandler module.",
+    "providers":  [
+                      "Modules\\Exceptionhandler\\Providers\\ModuleServiceProvider"
+                  ]
+}
