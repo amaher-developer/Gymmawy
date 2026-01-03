@@ -24,8 +24,8 @@ class PaymobFrontController extends GenericFrontController
 
         // Load Paymob credentials from environment or use hardcoded values
         $this->apiKey = env('PAYMOB_API_KEY', 'ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6VXhNaUo5LmV5SnVZVzFsSWpvaWFXNXBkR2xoYkNJc0ltTnNZWE56SWpvaVRXVnlZMmhoYm5RaUxDSndjbTltYVd4bFgzQnJJam96TkRNNU9EVjkuNF9ROGFDX0VKRzdCS3hCZ1dLSGlPZTNVeU1WTWc2azN3MXBWTnRUSHdqMWdEVjQwdjZWZ21TZkV6ZHp2M25nYldxUkFzSkNXaXg1czlyTlBLRlVrM1E=');
-        $this->integrationId = env('PAYMOB_INTEGRATION_ID', '5035975');
-        $this->iframeId = env('PAYMOB_IFRAME_ID', '452900');
+        $this->integrationId = env('PAYMOB_INTEGRATION_ID', '5434118');
+        $this->iframeId = env('PAYMOB_IFRAME_ID', '452899');
         $this->hmacSecret = env('PAYMOB_HMAC_SECRET', 'CF09313F5BEEAFDA690BC7F1C656DEE0');
     }
 
@@ -280,6 +280,10 @@ class PaymobFrontController extends GenericFrontController
 
             // Get callback data
             $success = $request->input('success');
+            $pending = $request->input('pending');
+            $errorOccured = $request->input('error_occured');
+            $isVoided = $request->input('is_voided');
+            $isRefunded = $request->input('is_refunded');
             $merchantOrderId = $request->input('merchant_order_id');
             $amountCents = $request->input('amount_cents');
             $transactionId = $request->input('id');
@@ -295,7 +299,15 @@ class PaymobFrontController extends GenericFrontController
                 return redirect(route('sw.listSwPayment'));
             }
 
-            if ($success == 'true' || $success === true) {
+            // Check if payment is truly successful
+            // Payment is successful only if: success=true AND pending=false AND error_occured=false AND is_voided=false AND is_refunded=false
+            $isPaymentSuccessful = ($success == 'true' || $success === true)
+                && ($pending == 'false' || $pending === false || $pending === null)
+                && ($errorOccured == 'false' || $errorOccured === false || $errorOccured === null)
+                && ($isVoided == 'false' || $isVoided === false || $isVoided === null)
+                && ($isRefunded == 'false' || $isRefunded === false || $isRefunded === null);
+
+            if ($isPaymentSuccessful) {
                 // Extract data from decoded order
                 $duration = $orderData['duration'] ?? 0;
                 $packageName = $orderData['package_name'] ?? '';
@@ -312,6 +324,10 @@ class PaymobFrontController extends GenericFrontController
                         'amount_cents' => $amountCents,
                         'currency' => $currency,
                         'success' => $success,
+                        'pending' => $pending,
+                        'error_occured' => $errorOccured,
+                        'is_voided' => $isVoided,
+                        'is_refunded' => $isRefunded,
                         'merchant_order_id' => $merchantOrderId,
                         'package_name' => $packageName,
                         'price' => $price,

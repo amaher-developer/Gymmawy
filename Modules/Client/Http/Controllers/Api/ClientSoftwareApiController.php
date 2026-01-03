@@ -110,7 +110,18 @@ class ClientSoftwareApiController extends GenericApiController
         $invoice->response = $request;
 
         // Check if payment was successful
-        $is_payment_success = @$request['success'] == true || @$request['success'] == 'true';
+        // Payment is successful only if: success=true AND pending=false AND error_occured=false AND is_voided=false AND is_refunded=false
+        $success = @$request['success'];
+        $pending = @$request['pending'];
+        $errorOccured = @$request['error_occured'];
+        $isVoided = @$request['is_voided'];
+        $isRefunded = @$request['is_refunded'];
+
+        $is_payment_success = ($success == true || $success == 'true')
+            && ($pending == false || $pending == 'false' || $pending === null)
+            && ($errorOccured == false || $errorOccured == 'false' || $errorOccured === null)
+            && ($isVoided == false || $isVoided == 'false' || $isVoided === null)
+            && ($isRefunded == false || $isRefunded == 'false' || $isRefunded === null);
 
 
         if($is_payment_success) {
@@ -206,10 +217,10 @@ class ClientSoftwareApiController extends GenericApiController
                 'lang' => 'en',
             ],
             // Custom callback URL for this specific controller
-            'callback_url' => route('client.sw.payment.callback')
+            // 'callback_url' => route('client.sw.payment.callback')
         ];
 
         $payment_url = $paymob->payment($paymentData);
-        return @$payment_url;
+        return @$package_payment['url'];
     }
 }
