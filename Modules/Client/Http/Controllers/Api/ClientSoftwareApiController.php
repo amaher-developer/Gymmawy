@@ -56,7 +56,7 @@ class ClientSoftwareApiController extends GenericApiController
         $invoice = ClientSoftwarePayment::create([
             'token' => $client->token,
             'title' => $package->name_en ?? 'Software Subscription',
-            'price' => $package->price ?? 0,
+            'price' => $package->price_usd ?? 0,
             'package_id' => $client_package,
             'date_from' => Carbon::now()->toDateString(),
             'date_to' => Carbon::now()->addDays(@(int)$package->duration)->toDateString(),
@@ -201,7 +201,7 @@ class ClientSoftwareApiController extends GenericApiController
         $paymob = new PaymobFrontController();
         $paymentData = [
             'name' => $package_payment->name_en,
-            'price' => (float)$package_payment->price,
+            'price' => (float)$package_payment->price_usd,
             'desc' => trans('sw.payment_subscription_msg', ['name' => $package_payment->name_en]),
             'qty' => 1,
             'duration' => $package_payment->duration,
