@@ -307,4 +307,7 @@ return [
     'notification_renew_msg' => 'Welcome :name, Your subscription in ":membership" has been renewed successfully',
     'notification_expire_msg' => 'Welcome :name, we remind you that your :membership expired',
     'notification_before_expire_msg' => 'Welcome :name, we remind you that your :membership about to expire',
+    'payment_subscription_msg' => 'subscription '.' :name '.' Gymmawy software for managing sports clubs',
+
+
 ];

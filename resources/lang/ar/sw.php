@@ -310,5 +310,6 @@ return [
     'notification_renew_msg' => ' اهلا وسهلا :name ,تم تجديد اشتراكك في عضوية ":membership" بنجاح',
     'notification_expire_msg' => 'اهلا وسهلا :name ,نذكرك أن عضويتك في :membership انتهت',
     'notification_before_expire_msg' => 'اهلا وسهلا :name ,نذكرك أن عضويتك في :membership اوشكت علي الانتهاء',
+'payment_subscription_msg' => 'اشتراك '.' :name '.' لبرنامج جيماوي لادراة النوادي الرياضية',
 
     ];

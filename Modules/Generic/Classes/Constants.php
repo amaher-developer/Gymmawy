@@ -23,4 +23,7 @@ class Constants {
     const BarcodeType = 'C128';
     const QRCodeType = 'QRCODE';
 
+     
+    const PAYMOB_TRANSACTION_FEES = 3;
+
 }
