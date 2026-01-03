@@ -62,7 +62,19 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-
+        'mysql_maher' => [
+                'driver' => 'mysql',
+                'host' => env('DB_MAHER_HOST', '127.0.0.1'),
+                'port' => env('DB_MAHER_PORT', '3306'),
+                'database' => env('DB_MAHER_DATABASE'),
+                'username' => env('DB_MAHER_USERNAME'),
+                'password' => env('DB_MAHER_PASSWORD'),
+                'charset' => 'utf8mb4',
+                'collation' => 'utf8mb4_unicode_ci',
+                'prefix' => '',
+                'strict' => true,
+                'engine' => null,
+            ],
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),

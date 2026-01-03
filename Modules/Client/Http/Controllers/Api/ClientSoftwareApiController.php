@@ -98,7 +98,7 @@ class ClientSoftwareApiController extends GenericApiController
         if(!$client) {
             return Redirect::to(env('APP_URL'))->with('error', 'Client not found');
         }
-
+        
         $packages = json_decode($client->sw_payments) ?? (object)['packages' => []];
         $package = @$packages->packages[($package_id - 1)];
 
@@ -112,20 +112,21 @@ class ClientSoftwareApiController extends GenericApiController
         // Check if payment was successful
         $is_payment_success = @$request['success'] == true || @$request['success'] == 'true';
 
+
         if($is_payment_success) {
             // Payment successful - update invoice status and client subscription
             $invoice->status = 'paid';
             $invoice->price = request('amount_cents') / 100;
             $invoice->save();
 
-            $client->date_to = Carbon::now()->addDays(@$package->duration)->toDateString();
+            $client->date_to = Carbon::now()->addDays(@(int)$package->duration)->toDateString();
             $client->save();
 
             /* update maher system for renew clients */
             $amount_box = DB::connection('mysql_maher')->table('sw_gym_money_boxes')->latest()->first();
             $amount_after = $this->amountAfter($amount_box->amount, $amount_box->amount_before, $amount_box->operation);
             $price = request('amount_cents') / 100;
-            $notes = 'تجديد: عميل مشترك "'.@$client->sms_sender_id.'" تجديد اشترك في "'.@$package->name_ar.'" في الفترة من '.Carbon::now()->toDateString().' الي '.Carbon::now()->addDays(@$package->duration)->toDateString().', دفع مبلغ "'.@$price.'"';
+            $notes = 'تجديد: عميل مشترك "'.@$client->sms_sender_id.'" تجديد اشترك في "'.@$package->name_ar.'" في الفترة من '.Carbon::now()->toDateString().' الي '.Carbon::now()->addDays((int)@$package->duration)->toDateString().', دفع مبلغ "'.@$price.'"';
 
             DB::connection('mysql_maher')->table('sw_gym_money_boxes')->insert([
                 'user_id' => 1,
@@ -140,6 +141,7 @@ class ClientSoftwareApiController extends GenericApiController
                 'updated_at' => Carbon::now()->toDateTimeString()
             ]);
             /* update maher system for renew clients */
+
 
             return Redirect::to($sw_url . '/api/sw-payment/s?p=' . $package_id . '&pd=' . ($package->duration) . '&t=true&ct=' . $client_token);
         } else {
