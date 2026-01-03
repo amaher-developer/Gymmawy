@@ -221,6 +221,6 @@ class ClientSoftwareApiController extends GenericApiController
         ];
 
         $payment_url = $paymob->payment($paymentData);
-        return @$package_payment['url'];
+        return @$payment_url;
     }
 }
