@@ -24,7 +24,7 @@ class PaymobFrontController extends GenericFrontController
 
         // Load Paymob credentials from environment or use hardcoded values
         $this->apiKey = env('PAYMOB_API_KEY', 'ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6VXhNaUo5LmV5SnVZVzFsSWpvaWFXNXBkR2xoYkNJc0ltTnNZWE56SWpvaVRXVnlZMmhoYm5RaUxDSndjbTltYVd4bFgzQnJJam96TkRNNU9EVjkuNF9ROGFDX0VKRzdCS3hCZ1dLSGlPZTNVeU1WTWc2azN3MXBWTnRUSHdqMWdEVjQwdjZWZ21TZkV6ZHp2M25nYldxUkFzSkNXaXg1czlyTlBLRlVrM1E=');
-        $this->integrationId = env('PAYMOB_INTEGRATION_ID', '5434118');
+        $this->integrationId = env('PAYMOB_INTEGRATION_ID', '5035975');
         $this->iframeId = env('PAYMOB_IFRAME_ID', '452900');
         $this->hmacSecret = env('PAYMOB_HMAC_SECRET', 'CF09313F5BEEAFDA690BC7F1C656DEE0');
     }
