@@ -4,7 +4,10 @@
       "Bash(dir:*)",
       "Bash(findstr:*)",
       "Bash(php artisan migrate:status:*)",
-      "Bash(php artisan:*)"
+      "Bash(php artisan:*)",
+      "Bash(cat:*)",
+      "Bash(git -C \"c:\\\\wamp64\\\\www\\\\gym\\\\gymmawy_v2\" log --oneline --all -20)",
+      "Bash(find:*)"
     ]
   }
 }

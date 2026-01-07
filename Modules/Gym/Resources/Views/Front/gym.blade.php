@@ -237,6 +237,26 @@
                         </section>
                         <!-- /section -->
 
+                        <!-- Banner Section -->
+                        @if(isset($banner))
+                        <section id="banner">
+                            <div class="text-center" style="margin: 20px 0;">
+                                @if($banner->url)
+                                    <a href="{{ $banner->url }}" target="_blank" rel="noopener">
+                                        <img src="{{ $banner->image }}" alt="{{ $banner->title ?? trans('global.advertisement') }}"
+                                             style="max-width: 100%; height: auto; border-radius: 5px;">
+                                    </a>
+                                @else
+                                    <img src="{{ $banner->image }}" alt="{{ $banner->title ?? trans('global.advertisement') }}"
+                                         style="max-width: 100%; height: auto; border-radius: 5px;">
+                                @endif
+                                @if($banner->title)
+                                    <p style="margin-top: 10px; font-size: 14px; color: #666;">{{ $banner->title }}</p>
+                                @endif
+                            </div>
+                        </section>
+                        @endif
+                        <!-- /Banner Section -->
 
 {{--                        <div class="text-center">--}}
 {{--                        <!-- banner 728*90 -->--}}

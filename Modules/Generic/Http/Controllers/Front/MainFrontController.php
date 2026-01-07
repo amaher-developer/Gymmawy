@@ -35,6 +35,7 @@ use Intervention\Image\Facades\Image;
 use Thujohn\Rss\Rss;
 use Chumper\Zipper\Facades\Zipper;
 use Illuminate\Support\Facades\File;
+use Modules\Generic\Classes\Constants;
 
 class MainFrontController extends GenericFrontController
 {
@@ -58,7 +59,16 @@ class MainFrontController extends GenericFrontController
         $calorie_categories = CalorieCategory::orderBy('id', 'asc')->get();
         $latest_trainers = Trainer::active()->limit(12)->orderByRaw('RAND()')->get();
         $latest_articles = Article::active()->with('user')->where('language', $this->lang)->limit(4)->orderBy('id', 'desc')->get();
-        $banner = Banner::where('is_web', true)->where('date_to', '>', Carbon::now())->first();
+
+        // Fetch banner for home page
+        $banner = Banner::select('id', 'title', 'image', 'url', 'phone')
+            ->where('lang', $this->lang)
+            ->where('is_web', 1)
+            ->where('type', Constants::BannerHomeType)
+            ->whereDate('date_from', '<=', Carbon::now())
+            ->whereDate('date_to', '>=', Carbon::now())
+            ->inRandomOrder()
+            ->first();
 
         return view('generic::Front.layouts.home', compact('home_vars', 'banner','calorie_categories', 'features_gyms', 'latest_articles', 'latest_trainers'));
     }

@@ -101,6 +101,21 @@
                             <img style="width: 100%" src="{{asset('resources/assets/front/img/ads/system.png')}}" class="img-responsive">
                         </a>
                     </div>
+                    <!-- Banner Widget -->
+                    @if(isset($banner))
+                    <div class="widget col-md-12">
+                        @if($banner->url)
+                            <a href="{{ $banner->url }}" target="_blank" rel="noopener" title="{{ $banner->title ?? trans('global.advertisement') }}">
+                                <img style="width: 100%" src="{{ $banner->image }}" class="img-responsive"
+                                     alt="{{ $banner->title ?? trans('global.advertisement') }}">
+                            </a>
+                        @else
+                            <img style="width: 100%" src="{{ $banner->image }}" class="img-responsive"
+                                 alt="{{ $banner->title ?? trans('global.advertisement') }}">
+                        @endif
+                    </div>
+                    @endif
+                    <!-- /Banner Widget -->
                     <div class="widget">
                         <div class="widget-title">
                             <h4>{{trans('global.categories')}}</h4>

@@ -53,6 +53,8 @@ class Banner extends GenericModel
             return trans('admin.trainer');
         elseif($type == 3)
             return trans('admin.home');
+        elseif($type == 4)
+            return trans('admin.article');
 
         return trans('admin.all');
     }

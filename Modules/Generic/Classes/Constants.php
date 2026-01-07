@@ -16,6 +16,7 @@ class Constants {
     const BannerHomeType = 3;
     const BannerGymType = 1;
     const BannerTrainerType = 2;
+    const BannerArticleType = 4;
 
     const NOTIFICATION_MESSAGE_TYPE = '2';
     const NOTIFICATION_URL_TYPE = '1';

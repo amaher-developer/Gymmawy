@@ -25,54 +25,61 @@ class GenericAdminController extends GenericController
     public function __construct()
     {
         $this->systemLanguages = ['ar', 'en'];
-
-        if (!request()->is('operate') && !request()->is('operate/admin/log')) {
-//            AdminLog::create([
-//                'admin_id' => Auth::user()->id,
-//                'link' => request()->fullUrl()
-//            ]);
-        }
-
         $this->SettingRepository = new SettingRepository(new Application);
-
-        $this->lang = 'ar';
-        request()->session()->put('lang', 'ar');
-        app()->setLocale(request()->session()->get('lang'));
-        View::share('lang', $this->lang);
-
-        if(request()->is('operate/modules*')){
-            request()->session()->put('lang', 'en');
-            app()->setLocale(request()->session()->get('lang'));
-        }
-
-        $user = Auth::user();
-        $this->user = $user;
         $this->limit = 10;
         $this->request_array = [];
-
         $this->modules_need_migration = false;
-        if(env('APP_ENV') == 'local') {
-            $modules = Module::all();
-            foreach ($modules as $module) {
-                if (!$this->modules_need_migration) {
-                    foreach (File::allFiles(module_path($module['slug']) . '/Database/Migrations/') as $module_migrations) {
-                        $migration_name = pathinfo($module_migrations->getPathname())['filename'];
-                        if (sizeof(Migration::where('migration', $migration_name)->get()) == 0) {
-                            $this->modules_need_migration = true;
-                            break;
-                        }
-                    }
 
-                } else {
-                    break;
-                }
+        // Move all session/auth-dependent code into middleware callback
+        $this->middleware(function ($request, $next) {
+            if (!request()->is('operate') && !request()->is('operate/admin/log')) {
+//                AdminLog::create([
+//                    'admin_id' => Auth::user()->id,
+//                    'link' => request()->fullUrl()
+//                ]);
             }
-        }
 
-        View::share('migrate', $this->modules_need_migration);
-        View::share('systemLanguages', $this->systemLanguages);
-        View::share('mainSettings', $this->SettingRepository->first());
-        View::share('currentUser', $user);
+            $this->lang = 'ar';
+            request()->session()->put('lang', 'ar');
+            app()->setLocale(request()->session()->get('lang'));
+            View::share('lang', $this->lang);
+
+            if(request()->is('operate/modules*')){
+                request()->session()->put('lang', 'en');
+                app()->setLocale(request()->session()->get('lang'));
+            }
+
+            $user = Auth::user();
+            $this->user = $user;
+            $this->limit = 10;
+            $this->request_array = [];
+    
+            $this->modules_need_migration = false;
+            // if(env('APP_ENV') == 'local') {
+            //     $modules = Module::all();
+            //     foreach ($modules as $module) {
+            //         if (!$this->modules_need_migration) {
+            //             foreach (File::allFiles(module_path($module['slug']) . '/Database/Migrations/') as $module_migrations) {
+            //                 $migration_name = pathinfo($module_migrations->getPathname())['filename'];
+            //                 if (sizeof(Migration::where('migration', $migration_name)->get()) == 0) {
+            //                     $this->modules_need_migration = true;
+            //                     break;
+            //                 }
+            //             }
+    
+            //         } else {
+            //             break;
+            //         }
+            //     }
+
+            // }
+            View::share('migrate', $this->modules_need_migration);
+            View::share('systemLanguages', $this->systemLanguages);
+            View::share('mainSettings', $this->SettingRepository->first());
+            View::share('currentUser', $this->user);
+
+            return $next($request);
+        });
 
     }
 

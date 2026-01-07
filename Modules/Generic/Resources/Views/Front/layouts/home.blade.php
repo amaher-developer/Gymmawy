@@ -12,19 +12,6 @@
         font-size: 2rem;
         margin: 25px 0 0 0;
     }
-    @if($banner)
-    .banner {
-        background: url("{{$banner->image}}") center center no-repeat;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
-        width: 100%;
-        height: 420px;
-        margin-bottom: 60px;
-        position: relative;
-    }
-    @endif
 </style>
 
 @endsection
@@ -167,20 +154,26 @@
         </div>
         @if(count(@$latest_trainers)>0)
         <div class="container container-custom margin_30_95">
-{{--            @if($banner)--}}
-{{--                <div class="banner mb-0">--}}
-{{--                    <div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.3)">--}}
-{{--                        <div>--}}
-{{--                            --}}{{--                    <small>Adventure</small>--}}
-{{--                            --}}{{--                    <h3>{{$banner->title}}</h3>--}}
-{{--                                                <p>{{$banner->title}}</p>--}}
-{{--                            <a href="{{$banner->url}}" class="btn_1">{{trans('global.details')}}</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <!-- /wrapper -->--}}
-{{--                </div><br/>--}}
-{{--                <!-- /banner -->--}}
-{{--            @endif--}}
+            <!-- Banner Section -->
+            @if(isset($banner))
+            <section id="banner" style="margin-bottom: 30px;">
+                <div class="text-center">
+                    @if($banner->url)
+                        <a href="{{ $banner->url }}" target="_blank" rel="noopener">
+                            <img src="{{ $banner->image }}" alt="{{ $banner->title ?? trans('global.advertisement') }}"
+                                 style="max-width: 100%; height: auto; border-radius: 5px;">
+                        </a>
+                    @else
+                        <img src="{{ $banner->image }}" alt="{{ $banner->title ?? trans('global.advertisement') }}"
+                             style="max-width: 100%; height: auto; border-radius: 5px;">
+                    @endif
+                    @if($banner->title)
+                        <p style="margin-top: 10px; font-size: 14px; color: #666;">{{ $banner->title }}</p>
+                    @endif
+                </div>
+            </section>
+            @endif
+            <!-- /Banner Section -->
 
             <section class="add_bottom_45">
                 <div class="main_title_3">

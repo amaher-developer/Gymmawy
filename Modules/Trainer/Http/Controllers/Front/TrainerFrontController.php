@@ -21,6 +21,8 @@ use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
 use Symfony\Component\HttpFoundation\Request;
+use Modules\Banner\Models\Banner;
+use Modules\Generic\Classes\Constants;
 
 
 class TrainerFrontController extends GenericFrontController
@@ -64,7 +66,17 @@ class TrainerFrontController extends GenericFrontController
         $metaDescription = $trainer->name . ', ' . $trainer->about;
         $metaImage = $trainer->image;
 
-        return view('trainer::Front.trainer', compact('trainer', 'metaImage','articles', 'title', 'metaKeywords', 'metaDescription'));
+        // Fetch banner for trainer detail page
+        $banner = Banner::select('id', 'title', 'image', 'url', 'phone')
+            ->where('lang', $this->lang)
+            ->where('is_web', 1)
+            ->where('type', Constants::BannerTrainerType)
+            ->whereDate('date_from', '<=', Carbon::now())
+            ->whereDate('date_to', '>=', Carbon::now())
+            ->inRandomOrder()
+            ->first();
+
+        return view('trainer::Front.trainer', compact('trainer', 'metaImage','articles', 'title', 'metaKeywords', 'metaDescription', 'banner'));
     }
 
     public function trainers()

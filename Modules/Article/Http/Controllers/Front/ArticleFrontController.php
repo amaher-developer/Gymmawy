@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
+use Modules\Banner\Models\Banner;
+use Modules\Generic\Classes\Constants;
 
 class ArticleFrontController extends GenericFrontController
 {
@@ -89,9 +91,18 @@ class ArticleFrontController extends GenericFrontController
         $metaDescription = $article->meta_description ? $article->meta_description : $article->title;
         $metaImage = $article->image;
 
+        // Fetch banner for article detail page
+        $banner = Banner::select('id', 'title', 'image', 'url', 'phone')
+            ->where('lang', $this->lang)
+            ->where('is_web', 1)
+            ->where('type', Constants::BannerArticleType)
+            ->whereDate('date_from', '<=', Carbon::now())
+            ->whereDate('date_to', '>=', Carbon::now())
+            ->inRandomOrder()
+            ->first();
 
         return view('article::Front.article',
-            compact('title', 'metaImage', 'article', 'article_categories', 'popular_articles', 'metaKeywords', 'metaDescription'));
+            compact('title', 'metaImage', 'article', 'article_categories', 'popular_articles', 'metaKeywords', 'metaDescription', 'banner'));
     }
 
     public function articles()
@@ -132,8 +143,19 @@ class ArticleFrontController extends GenericFrontController
         $title = $title .' - '.trans('global.page').' '.$page;
 
         $metaKeywords = ', ' . implode(', ', $article_categories->pluck('name')->toArray());
+
+        // Fetch banner for article list page
+        $banner = Banner::select('id', 'title', 'image', 'url', 'phone')
+            ->where('lang', $this->lang)
+            ->where('is_web', 1)
+            ->where('type', Constants::BannerArticleType)
+            ->whereDate('date_from', '<=', Carbon::now())
+            ->whereDate('date_to', '>=', Carbon::now())
+            ->inRandomOrder()
+            ->first();
+
         return view('article::Front.articles',
-            compact('articles', 'article_categories', 'title', 'popular_articles', 'metaKeywords')
+            compact('articles', 'article_categories', 'title', 'popular_articles', 'metaKeywords', 'banner')
         );
     }
 

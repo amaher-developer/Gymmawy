@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
+use Modules\Banner\Models\Banner;
+use Modules\Generic\Classes\Constants;
+use Carbon\Carbon;
 
 
 class GymFrontController extends GenericFrontController
@@ -164,7 +167,17 @@ class GymFrontController extends GenericFrontController
         $metaDescription = $gym->name . ', ' . $gym->description;
         $metaImage = $gym->image;
 
-        return view('gym::Front.gym', compact('gym', 'related_gyms','metaImage', 'title', 'metaKeywords', 'metaDescription', 'articles'));
+        // Fetch banner for gym detail page
+        $banner = Banner::select('id', 'title', 'image', 'url', 'phone')
+            ->where('lang', $this->lang)
+            ->where('is_web', 1)
+            ->where('type', Constants::BannerGymType)
+            ->whereDate('date_from', '<=', Carbon::now())
+            ->whereDate('date_to', '>=', Carbon::now())
+            ->inRandomOrder()
+            ->first();
+
+            return view('gym::Front.gym', compact('gym', 'related_gyms','metaImage', 'title', 'metaKeywords', 'metaDescription', 'articles', 'banner'));
 
     }
 
