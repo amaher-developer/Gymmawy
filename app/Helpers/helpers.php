@@ -44,3 +44,47 @@ if (!function_exists('sweet_alert')) {
     }
 }
 
+if (!function_exists('calorie_units')) {
+    /**
+     * Get calorie measurement units in different languages
+     *
+     * @param string $lang Language code ('en' or 'ar')
+     * @return array Array of unit names indexed by unit ID
+     */
+    function calorie_units($lang = 'en')
+    {
+        $units = [
+            'en' => [
+                0 => 'Gram',
+                1 => 'Kilogram',
+                2 => 'Ounce',
+                3 => 'Pound',
+                4 => 'Cup',
+                5 => 'Tablespoon',
+                6 => 'Teaspoon',
+                7 => 'Piece',
+                8 => 'Liter',
+                9 => 'Milliliter',
+                10 => 'Slice',
+                11 => 'Serving',
+            ],
+            'ar' => [
+                0 => 'جرام',
+                1 => 'كيلوجرام',
+                2 => 'أونصة',
+                3 => 'رطل',
+                4 => 'كوب',
+                5 => 'ملعقة طعام',
+                6 => 'ملعقة صغيرة',
+                7 => 'قطعة',
+                8 => 'لتر',
+                9 => 'ميليلتر',
+                10 => 'شريحة',
+                11 => 'حصة',
+            ],
+        ];
+
+        return $units[$lang] ?? $units['en'];
+    }
+}
+
