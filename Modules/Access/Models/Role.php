@@ -2,9 +2,9 @@
 
 namespace Modules\Access\Models;
 
-use Shanmuga\LaravelEntrust\Models\LaravelEntrustRole;
+use Shanmuga\LaravelEntrust\Models\EntrustRole;
 
-class Role extends LaravelEntrustRole
+class Role extends EntrustRole
 {
     protected $fillable = ['name', 'display_name', 'description'];
     public $timestamps = TRUE;

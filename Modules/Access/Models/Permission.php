@@ -2,9 +2,9 @@
 
 namespace Modules\Access\Models;
 
-use Shanmuga\LaravelEntrust\Models\LaravelEntrustPermission;
+use Shanmuga\LaravelEntrust\Models\EntrustPermission;
 
-class Permission extends LaravelEntrustPermission
+class Permission extends EntrustPermission
 {
     public function group()
     {
