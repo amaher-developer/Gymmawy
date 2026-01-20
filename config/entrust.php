@@ -32,7 +32,7 @@ return [
     | to have a different name, you can do it here.
     |
     */
-    'user_model' => 'App\Models\User',
+    'user_model' => 'Modules\Access\Models\User',
 
     /*
     |--------------------------------------------------------------------------

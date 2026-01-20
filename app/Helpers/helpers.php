@@ -44,6 +44,35 @@ if (!function_exists('sweet_alert')) {
     }
 }
 
+if (!function_exists('has_any_access')) {
+    /**
+     * Check if user has any of the given permissions
+     *
+     * @param array $permissions Array of permission names to check
+     * @param mixed $user User object with perms attribute
+     * @return int Count of matching permissions
+     */
+    function has_any_access(array $permissions, $user)
+    {
+        if (!$user || !isset($user->perms)) {
+            return 0;
+        }
+
+        $userPerms = $user->perms;
+
+        if (!is_array($userPerms)) {
+            return 0;
+        }
+
+        // Check for 'super' permission which grants access to everything
+        if (in_array('super', $userPerms)) {
+            return count($permissions);
+        }
+
+        return count(array_intersect($permissions, $userPerms));
+    }
+}
+
 if (!function_exists('calorie_units')) {
     /**
      * Get calorie measurement units in different languages
