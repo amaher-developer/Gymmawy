@@ -33,7 +33,7 @@ class ClientSoftwareApiController extends GenericApiController
 
     }
     public function getClientInvoices($token){
-        $invoices = ClientSoftwarePayment::where('token', $token)->orderBy('id','desc')->limit(3)->get();
+        $invoices = ClientSoftwarePayment::where('token', $token)->where('status', 'paid')->orderBy('id','desc')->limit(3)->get();
         return response()->json($invoices)->setStatusCode(Response::HTTP_OK, Response::$statusTexts[Response::HTTP_OK]);
 
     }
