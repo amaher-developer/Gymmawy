@@ -225,8 +225,8 @@ class PaymobFrontController extends GenericFrontController
             $billingData = [
                 'first_name' => 'Gym',
                 'last_name' => 'Customer',
-                'email' => $setting->email ?? 'customer@gym.com',
-                'phone_number' => $setting->phone ?? '01000000000',
+                'email' => $setting->email ?? 'gymmawy.com@gmail.com',
+                'phone_number' => $setting->phone ?? '01002509905',
                 'apartment' => 'NA',
                 'floor' => 'NA',
                 'street' => 'NA',
