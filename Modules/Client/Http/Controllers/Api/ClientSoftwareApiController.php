@@ -123,6 +123,13 @@ class ClientSoftwareApiController extends GenericApiController
             && !($isVoided === true || $isVoided === 'true' || $isVoided === 1 || $isVoided === '1')
             && !($isRefunded === true || $isRefunded === 'true' || $isRefunded === 1 || $isRefunded === '1');
 
+        \Illuminate\Support\Facades\Log::info('Payment check', [
+            'success' => $success,
+            'success_type' => gettype($success),
+            'is_payment_success' => $is_payment_success,
+            'invoice_id' => $invoice_id,
+            'client_token' => $client_token
+        ]);
 
         if($is_payment_success) {
             // Payment successful - update invoice status and client subscription
