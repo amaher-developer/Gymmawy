@@ -214,7 +214,7 @@ class ClientSoftwareApiController extends GenericApiController
             'duration' => $package_payment->duration,
             // Add custom client data that will be passed through and received in callback
             'client_data' => [
-                'gym_name' => $client->name ?? 'Gym',
+                'gym_name' => $client->sms_sender_id ?? 'Gym',
                 'gym_email' => $client->email ?? 'gymmawy.com@gmail.com',
                 'gym_phone' => $client->phone ?? '01002509905',
                 'package_id' => $id,

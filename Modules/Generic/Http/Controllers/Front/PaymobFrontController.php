@@ -223,10 +223,10 @@ class PaymobFrontController extends GenericFrontController
             $amountCents = (int)($totalAmount * 100);
 
             $billingData = [
-                'first_name' => 'Gym',
+                'first_name' => $item['client_data']['gym_name'] ?? 'Gym',
                 'last_name' => 'Customer',
-                'email' => $setting->email ?? 'gymmawy.com@gmail.com',
-                'phone_number' => $setting->phone ?? '01002509905',
+                'email' => $item['client_data']['gym_email'] ?? 'gymmawy.com@gmail.com',
+                'phone_number' => $item['client_data']['gym_phone'] ?? '01002509905',
                 'apartment' => 'NA',
                 'floor' => 'NA',
                 'street' => 'NA',
