@@ -117,11 +117,11 @@ class ClientSoftwareApiController extends GenericApiController
         $isVoided = @$request['is_voided'];
         $isRefunded = @$request['is_refunded'];
 
-        $is_payment_success = ($success == true || $success == 'true')
-            && ($pending == false || $pending == 'false' || $pending === null)
-            && ($errorOccured == false || $errorOccured == 'false' || $errorOccured === null)
-            && ($isVoided == false || $isVoided == 'false' || $isVoided === null)
-            && ($isRefunded == false || $isRefunded == 'false' || $isRefunded === null);
+        $is_payment_success = ($success === true || $success === 'true' || $success === 1 || $success === '1')
+            && !($pending === true || $pending === 'true' || $pending === 1 || $pending === '1')
+            && !($errorOccured === true || $errorOccured === 'true' || $errorOccured === 1 || $errorOccured === '1')
+            && !($isVoided === true || $isVoided === 'true' || $isVoided === 1 || $isVoided === '1')
+            && !($isRefunded === true || $isRefunded === 'true' || $isRefunded === 1 || $isRefunded === '1');
 
 
         if($is_payment_success) {
